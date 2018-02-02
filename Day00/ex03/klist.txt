@@ -1,0 +1,7 @@
+Credentials cache: API:32464
+        Principal: shomami@42.US.ORG
+
+  Issued                Expires               Principal
+Jan  8 14:29:44 2018  Jan  9 00:29:44 2018  krbtgt/42.US.ORG@42.US.ORG
+Jan  8 14:30:00 2018  Jan  9 00:29:44 2018  ldap/ldap-proxy.42.us.org@42.US.ORG
+Jan  8 14:49:52 2018  Jan  9 00:29:44 2018  host/vgs-fn1.42.us.org@42.US.ORG
