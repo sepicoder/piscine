@@ -13,21 +13,32 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int		main(int argc, char **argv)
+void		printlast(char *str)
 {
-	char *str = argv[1];
-	char *tmp;
-	if (*str == '\0')
-		return (0);
-	while (*str)
-	{
-		while (*str == ' ' || *str == '\t')
-			str++;
-		if (*str != '\0')
-			tmp = str;
-		while (*str != ' ' && *str != '\t' && *str != '\0')
-			str++;
-	}
-	while (*tmp && tmp != ' ' && tmp != '\t')
-		write(1, tmp++, 1);
+  char *marker;
+
+	 while(*str)
+	 {
+		  if(*str && *str != ' ' && *str != '\t')
+			{
+				marker = str;
+				while(*str && *str != ' ' && *str != '\t')
+				   str++;
+			}
+			while(*str == ' ' || *str == '\t')
+			   str++;
+	 }
+	 while(*marker && *marker != ' ' && *marker != '\t')
+	   write(1, marker++, 1);
+}
+
+
+int  main(int argc, char **argv)
+{
+	 if(argc == 2)
+	 {
+		  printlast(argv[1]);
+	 }
+	 write(1, "\n", 1);
+	 return (0);
 }
